@@ -1,0 +1,30 @@
+<div class="card border-secondary mb-3 col-sm-12 mx-auto">
+    <div class="card-header bg-transparent border-secondary">Details of <b><i>{{employee.first_name}} {{ employee.last_name }}</i></b></div>
+    <div class="card-body text-secondary">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Employee Id</th>
+                    <td>{{employee.id}}</td>
+                </tr>
+                <tr>
+                    <th>Employee First Name</th>
+                    <td>{{employee.first_name}}</td>
+                </tr>
+                <tr>
+                    <th>Employee Last Name</th>
+                    <td>{{employee.last_name}}</td>
+                </tr>
+                <tr>
+                    <th>Employee Email</th>
+                    <td>{{employee.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer bg-transparent border-secondary">
+        <a class="btn btn-info" routerLink="/employees">Employee List</a>
+        <button class="btn btn-danger m-2" (click)="deleteEmployee()">Delete</button>
+        <a class="btn btn-secondary" [routerLink]="['/employee-update', employee.id]">Update</a>
+    </div>
+</div>
